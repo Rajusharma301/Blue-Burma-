@@ -8,6 +8,7 @@ from concurrent.futures import ThreadPoolExecutor
 
 warnings.filterwarnings("ignore", category=XMLParsedAsHTMLWarning)
 
+# Supabase Configurations
 SUPABASE_URL = 'https://esxxyoguiwkhivydfnzg.supabase.co/rest/v1'
 SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVzeHh5b2d1aXdraGl2eWRmbnpnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODU5NDI0ODksImV4cCI6MjEwMTUxODQ4OX0.J-zgz71xmLEZ6Kb0-K2--27yMd9Wfs75XcA392cnOWo'
 
@@ -132,7 +133,7 @@ def run_jav_scraper():
     for page in range(1, 4):
         scrape_page(page, base_url)
 
-    # ၂။ အဟောင်းများကို တစ်ကြိမ်လျှင် Page 10 မျက်နှာစီ ဗျောင်းပြန် ဆွဲယူခြင်း (Timeout မဖြစ်အောင်)
+    # ၂။ အဟောင်းများကို တစ်ကြိမ်လျှင် Page 10 မျက်နှာစီ ဗျောင်းပြန် ဆွဲယူခြင်း
     START_PAGE = 611
     END_PAGE = 600
     
