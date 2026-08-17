@@ -132,15 +132,14 @@ def run_jav_scraper():
     for page in range(1, 4):
         scrape_page(page, base_url)
 
-    # ၂။ Page 611 ကနေ 1 ထိ ဗျောင်းပြန်လှည့်၍ စစ်ဆေးခြင်း (အဟောင်းများဆွဲရန်)
-    # GitHub Actions မှာ Timeout မဖြစ်အောင် တစ်ကြိမ် Run လျှင် Page 10 မျက်နှာခန့် လုပ်ဆောင်နိုင်ပါသည်
+    # ၂။ အဟောင်းများကို တစ်ကြိမ်လျှင် Page 10 မျက်နှာစီ ဗျောင်းပြန် ဆွဲယူခြင်း (Timeout မဖြစ်အောင်)
     START_PAGE = 611
-    END_PAGE = 1
+    END_PAGE = 600
     
-    print(f"\n🔄 Reverse Scraping from Page {START_PAGE} down to {END_PAGE}...")
+    print(f"\n🔄 Reverse Scraping Batch: Page {START_PAGE} down to {END_PAGE}...")
     for page in range(START_PAGE, END_PAGE - 1, -1):
         scrape_page(page, base_url)
 
 if __name__ == '__main__':
     run_jav_scraper()
-        
+    
